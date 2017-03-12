@@ -7,9 +7,10 @@ class Player(db.Model):
     id = db.Column(db.String, primary_key=True)
     password = db.Column(db.String)
     gender = db.Column(db.String)
-    achievement_rate = db.Column(db.String)
+    achievement_rate = db.Column(db.Float)
     birth = db.Column(db.String)
     create_time = db.Column(db.DateTime, default=datetime.now)
+    
 
 class Profile(db.Model):
     __tablename__ = 'profiles'

@@ -24,12 +24,13 @@ def test22():
 class PlayerCollection(Resource):
     @profiling
     def get(self, player_id):
+        print("@@@@@@@@@@@@@@@@!!!!!!!!!!!!!!!!!!!!!!!!!")
         p = Player.query.filter(player_id == Player.id).first()
         player_pass = p.password
         player_gender = p.gender
         player_birth = p.birth
         player = make_plain_dict(p)
-
+        print("여기는왓느냐")
         return player
 
 class PlayerUnit(Resource):

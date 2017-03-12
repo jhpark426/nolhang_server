@@ -365,3 +365,11 @@ INFO:tornado.access:200 GET /players/jpark426 (127.0.0.1) 34.57ms
 INFO:tornado.general:run.py modified; restarting server
 INFO:tornado.general:/Users/HwiRiRic/Documents/nolhang/nolhang_server/nolhang_server/app/models.py modified; restarting server
 INFO:tornado.general:/Users/HwiRiRic/Documents/nolhang/nolhang_server/nolhang_server/app/__init__.py modified; restarting server
+INFO:tornado.general:/Users/HwiRiRic/Documents/nolhang/nolhang_server/nolhang_server/app/__init__.py modified; restarting server
+INFO:tornado.general:/Users/HwiRiRic/Documents/nolhang/nolhang_server/nolhang_server/app/apis.py modified; restarting server
+INFO:tornado.access:200 GET /players/jpark426 (192.168.0.4) 99.09ms
+INFO:tornado.access:200 GET /players/jpark426 (192.168.0.4) 39.27ms
+INFO:tornado.general:/Users/HwiRiRic/Documents/nolhang/nolhang_server/nolhang_server/app/apis.py modified; restarting server
+INFO:tornado.access:200 GET /players/jpark426 (192.168.0.4) 61.33ms
+INFO:tornado.access:200 GET /players/jpark426 (192.168.0.4) 9.62ms
+INFO:tornado.general:/Users/HwiRiRic/Documents/nolhang/nolhang_server/nolhang_server/app/apis.py modified; restarting server
