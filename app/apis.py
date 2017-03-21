@@ -6,6 +6,8 @@ from .common import profiling, make_plain_dict
 from .models import Player
 from tornado.ioloop import IOLoop
 import tornado.web
+from json import dumps
+from json import JSONEncoder
 
 api = Api(app)
 
@@ -30,6 +32,8 @@ class PlayerCollection(Resource):
         player_gender = p.gender
         player_birth = p.birth
         player = make_plain_dict(p)
+        print("player_pass", player_pass)
+        print("player_gender", player_gender)
         print("여기는왓느냐")
         return player
 
