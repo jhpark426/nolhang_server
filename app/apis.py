@@ -37,6 +37,7 @@ class PlayerCollection(Resource):
         print("여기는왓느냐")
         return player
 
+
 class PlayerUnit(Resource):
     @profiling
     def get(self, player_id):
