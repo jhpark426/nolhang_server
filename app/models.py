@@ -5,12 +5,12 @@ from app import db
 
 class Player(db.Model):
         __tablename__='players'
-        player_code = db.Column(db.Integer,primary_key=True)
-        player_name = db.Column(db.String)
-        player_gender = db.Column(db.String)
-        player_age = db.Column(db.Integer)
-        player_tel = db.Column(db.Integer)
-        player_solve_question_count = db.Column(db.Integer)
+        id = db.Column(db.Integer,primary_key=True)
+        name = db.Column(db.String)
+        gender = db.Column(db.String)
+        age = db.Column(db.Integer)
+        tel = db.Column(db.Integer)
+        solve_question_count = db.Column(db.Integer)
         create_time = db.Column(db.DateTime,default=datetime.now)
 
 class Region(db.Model):
@@ -29,7 +29,7 @@ class Question(db.Model):
 class Inventory(db.Model):
         __tablename__ = 'inventory'
         index = db.Column(db.Integer,primary_key=True)
-        player_code = db.Column(db.Integer,db.ForeignKey('player.player_code'))
+        player_code = db.Column(db.Integer,db.ForeignKey('player.id'))
         question_code = db.Column(db.Integer)
         status = db.Column(db.Integer,default=0)
         start_time = db.Column(db.DateTime,default=datetime.now)

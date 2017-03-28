@@ -793,3 +793,7 @@ AttributeError: 'NoneType' object has no attribute 'password'
 ERROR:tornado.access:500 GET /players/aaaa (192.168.123.103) 55.91ms
 INFO:tornado.access:200 GET /players/jpark426 (192.168.123.103) 12.99ms
 INFO:tornado.general:/Users/HwiRiRic/Documents/nolhang/nolhang_server/nolhang_server/app/models.py modified; restarting server
+INFO:tornado.general:/Users/HwiRiRic/Documents/nolhang/nolhang_server/nolhang_server/app/apis.py modified; restarting server
+INFO:tornado.general:/Users/HwiRiRic/Documents/nolhang/nolhang_server/nolhang_server/app/apis.py modified; restarting server
+INFO:tornado.general:/Users/HwiRiRic/Documents/nolhang/nolhang_server/nolhang_server/app/models.py modified; restarting server
+INFO:tornado.general:/Users/HwiRiRic/Documents/nolhang/nolhang_server/nolhang_server/app/models.py modified; restarting server

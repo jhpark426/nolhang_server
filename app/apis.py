@@ -28,12 +28,7 @@ class PlayerCollection(Resource):
     def get(self, player_id):
         print("@@@@@@@@@@@@@@@@!!!!!!!!!!!!!!!!!!!!!!!!!")
         p = Player.query.filter(player_id == Player.id).first()
-        player_pass = p.password
-        player_gender = p.gender
-        player_birth = p.birth
         player = make_plain_dict(p)
-        print("player_pass", player_pass)
-        print("player_gender", player_gender)
         print("여기는왓느냐")
         return player
 
