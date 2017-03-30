@@ -15,12 +15,12 @@ api = Api(app)
 def hello_world():
     return 'Hello World!'
 
-def test22():
+def test22(self,player_id):
     p = Player.query.filter(player_id == Player.id).first()
-    player_pass = p.password
-    player_gender = p.gender
-    player_birth = p.birth
+
     player = make_plain_dict(p)
+
+    print("aaaa", player)
     return player
 
 class PlayerCollection(Resource):
@@ -28,8 +28,11 @@ class PlayerCollection(Resource):
     def get(self, player_id):
         print("@@@@@@@@@@@@@@@@!!!!!!!!!!!!!!!!!!!!!!!!!")
         p = Player.query.filter(player_id == Player.id).first()
+        player_name = p.name
         player = make_plain_dict(p)
+        print("player_name : ", player_name)
         print("여기는왓느냐")
+
         return player
 
 
@@ -66,5 +69,5 @@ class Testing(Resource):
         print("aaaaaaaaaa");
         return ;
 
-api.add_resource(Testing, '/testing')
+api.add_resource(Testing, '/testing/<string:player_id>')
 api.add_resource(PlayerCollection, '/players/<string:player_id>') #plural

@@ -5,13 +5,20 @@ from app import db
 
 class Player(db.Model):
         __tablename__='players'
-        id = db.Column(db.Integer,primary_key=True)
+        id = db.Column(db.String,primary_key=True)
         name = db.Column(db.String)
         gender = db.Column(db.String)
         age = db.Column(db.Integer)
         tel = db.Column(db.Integer)
         solve_question_count = db.Column(db.Integer)
         create_time = db.Column(db.DateTime,default=datetime.now)
+
+class Profile(db.Model):
+    __tablename__ = 'profiles'
+    id = db.Column(db.Integer, primary_key=True)
+    function_name = db.Column(db.String)
+    execution_sec = db.Column(db.Float)
+    create_time = db.Column(db.DateTime, default=datetime.now)
 
 class Region(db.Model):
         __talbename__ = 'regions'
@@ -34,10 +41,3 @@ class Inventory(db.Model):
         status = db.Column(db.Integer,default=0)
         start_time = db.Column(db.DateTime,default=datetime.now)
         finish_time = db.Column(db.DateTime,default=datetime.now)
-
-class Profile(db.Model):
-    __tablename__ = 'profiles'
-    id = db.Column(db.Integer, primary_key=True)
-    function_name = db.Column(db.String)
-    execution_sec = db.Column(db.Float)
-    create_time = db.Column(db.DateTime, default=datetime.now)
