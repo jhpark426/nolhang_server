@@ -13,7 +13,8 @@ class Player(db.Model):
 	gender=db.Column(db.String(64))
 	age=db.Column(db.Integer)
 	tel=db.Column(db.Integer)
-	solve_question_count=db.Column(db.Integer)
+	point=db.Column(db.Integer)
+    status=db.Column(db.String(64))
 	create_time=db.Column(db.DateTime,default=datetime.now)
 
 	player=db.relationship('Inventory',backref='post',cascade='all,delete-orphan',lazy='dynamic')

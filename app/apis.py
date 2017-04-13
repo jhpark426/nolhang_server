@@ -15,26 +15,25 @@ api = Api(app)
 def hello_world():
     return 'Hello World!'
 
-def test22(self,player_id):
-    p = Player.query.filter(player_id == Player.id).first()
-
-    player = make_plain_dict(p)
-
-    print("aaaa", player)
-    return player
-
-class PlayerCollection(Resource):
+class PlayerFindUnit(Resource):
     @profiling
     def get(self, player_id):
-        print("@@@@@@@@@@@@@@@@!!!!!!!!!!!!!!!!!!!!!!!!!")
+        print("ok", player_id)
         p = Player.query.filter(player_id == Player.id).first()
-        player_name = p.name
+        if p is None: return "No such player", 204
         player = make_plain_dict(p)
-        print("player_name : ", player_name)
-        print("여기는왓느냐")
-
+        print("player get!: ", player_name)
         return player
 
+class PlayerFinishUnit(Resource):
+    @profiling
+    def put(self, player_id):
+        print("Player Finish", player_id)
+        p = Player.query.filter(player_id == Player.generated_id).first()
+        if p is None: return "No such p layer", 204
+        p.status = "finish"
+        db.session.commit()
+        return {"result":"success"}
 
 class PlayerUnit(Resource):
     @profiling
@@ -69,5 +68,5 @@ class Testing(Resource):
         print("aaaaaaaaaa");
         return ;
 
-api.add_resource(Testing, '/testing/<string:player_id>')
-api.add_resource(PlayerCollection, '/players/<string:player_id>') #plural
+api.add_resource(PlayerFindUnit, '/players/<string:player_id>') #plural
+api.add_resource(PlayerFinishUnit, 'finish/<string:player_id>')

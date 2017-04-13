@@ -5,7 +5,7 @@ from .models import Player,Region,Question
 from app import db
 
 #input_path setup
-XL_PATH = '/import/DB.xlsx'
+XL_PATH = '/import/DB_university_incheion.xlsx'
 cwd_xl = path.dirname(path.abspath(__file__)) + XL_PATH
 dir_strings = cwd_xl.split("/")
 dir_strings = [i for i in dir_strings]
