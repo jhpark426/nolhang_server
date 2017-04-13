@@ -6,8 +6,8 @@ from os import getcwd
 import json
 
 def export_database_to_json ():
-    models = [Region,Question]
-    table_names = ["regions","questions"]
+    models = [Region, Question]
+    table_names = ["regions", "questions"]
     out = getcwd() + "/app/export/"
     for index, table in enumerate(table_names):
         data_list = [ convert_as_camel_case(row) for row in db.session.query(models[index]).all() ]

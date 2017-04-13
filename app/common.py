@@ -20,7 +20,6 @@ class JSONEncoder(JSONEncoder):
         return JSONEncoder.default(self, o)
 
 class Command:
-
     def __init__(self, command, data):
         eval("self."+command+"(command, data)")
 
